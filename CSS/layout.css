@@ -1,7 +1,10 @@
 :root{
     --main-color: #ef5f33;
+    --main-color-hover: #fd8662;
     --transparent-background: rgba(0, 0, 0, 0.7);
     --main-font: 'Roboto Mono', 'Courier New', Courier, monospace;
+    --titles-weight: 600;
+    --hover-transition: all 0.2s ease-out;
 }
 
 body{
@@ -13,14 +16,18 @@ body{
     font-family: var(--main-font);
 }
 
+header,
+footer{
+    min-width: 100%;
+    background-color: var(--transparent-background);
+}
+
 header{
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     font-size: 1.25rem;
-    font-weight: 600;
-    min-width: 100%;
-    background-color: var(--transparent-background);
+    font-weight: var(--titles-weight);
 }
 
 header a{
@@ -29,14 +36,14 @@ header a{
 
 header a:hover{
     cursor: pointer;
+    color: var(--main-color-hover);
+    transition: var(--hover-transition);
 }
 
 footer{
     padding: 1rem;
     text-align: center;
-    min-width: 100%;
     font-size: 1.125rem;
-    background-color: var(--transparent-background);
 }
 
 .nav-items-container{
