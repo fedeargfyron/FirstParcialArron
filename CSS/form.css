@@ -1,0 +1,67 @@
+:root {
+    --button-background: #0575E6;
+    --input-background: #e4eff8;
+    --error-background: #ffa69e;
+    --error-label: #ffa69e;
+    --radius-50: 50px;
+    --padding-1: 1rem;
+}
+
+::placeholder {
+    color: black;
+}
+
+form{
+    background-color: var(--transparent-background);
+    padding: var(--padding-1);
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+input{
+    border: unset;
+    background-color: var(--input-background);
+    color: black;
+    padding: var(--padding-1);
+    border-radius: var(--radius-50);
+    width: 250px;
+    margin: .5rem .25rem;
+}
+
+button{
+    background-color: var(--main-color);
+    color: black;
+    border: unset;
+    border-radius: var(--radius-50);
+    padding: var(--padding-1) 2rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.row-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    text-align:start;
+    padding: .25rem;
+}
+
+.input-container label{
+    margin-left: 1rem;
+    color: var(--error-label);
+    max-width: fit-content;
+    
+}
+
+.visible{
+    display: block;
+}
+
+.error{
+    background-color: var(--error-background);
+}

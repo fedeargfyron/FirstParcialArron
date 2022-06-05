@@ -34,7 +34,8 @@ header a{
     color: var(--main-color);
 }
 
-header a:hover{
+header a:hover,
+.fa-bars:hover{
     cursor: pointer;
     color: var(--main-color-hover);
     transition: var(--hover-transition);

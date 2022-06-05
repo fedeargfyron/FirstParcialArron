@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/layout.css">
     <link rel="stylesheet" href="./CSS/subscribe.css">
+    <link rel="stylesheet" href="./CSS/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
@@ -29,7 +30,70 @@
             <i class="fas fa-bars"></i>
         </nav>
     </header>
-    <main>
+    <main class="subscribe-main">
+        <form>
+            <h1>Subscribe for free!</h1>
+            <div class="row-container">
+                <div class="input-container">
+                    <input id="name" type="text" placeholder="Nombre">
+                    <label id="lblname" for="name"></label>
+                </div>
+                <div class="input-container">
+                    <input id="apellido" type="text" placeholder="Apellido">
+                    <label id="lblapellido" for="apellido"></label>
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="input-container">
+                    <input id="email" type="text" placeholder="Email">
+                    <label id="lblemail" for="email"></label>
+                </div>
+                <div class="input-container">
+                    <input id="edad" type="text" placeholder="Edad">
+                    <label id="lbledad" for="edad"></label>
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="input-container">
+                    <input type="radio" name="sexo" id="hombre" value="Hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="sexo" id="mujer" value="Mujer">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="sexo" id="otros" value="Otros">
+                    <label for="otros">Otros</label>
+                    <label id="lblsexo"></label>
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" name="interes" id="deporte" value="Deporte">
+                    <label for="deporte">Deporte</label>
+                    <input type="checkbox" name="interes" id="musica" value="Musica">
+                    <label for="musica">Musica</label>
+                    <input type="checkbox" name="interes" id="juegos" value="Juegos">
+                    <label for="juegos">Juegos</label>
+                    <input type="checkbox" name="interes" id="tecnologia" value="Tecnologia">
+                    <label for="tecnologia">Tecnologia</label>
+                    <label id="lblinteres"></label>
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="input-container">
+                    <select id="pais" placeholder="Seleccionar...">
+                        <option>Seleccionar...</option>
+                        <option>Argentina</option>
+                        <option>Chile</option>
+                        <option>Brasil</option>
+                        <option>Uruguay</option>
+                    </select>
+                    <label id="lblpais" for="pais"></label>
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="input-container">
+                    <textarea id="comentarios"></textarea>
+                </div>
+            </div>
+            <button id="submitBtn" type="submit">Let's go</button>
+        </form>
     </main>
     <footer>
         <p>Arron Factories 2022. All rights reserved.</p>
