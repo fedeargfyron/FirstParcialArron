@@ -55,40 +55,55 @@
             </div>
             <div class="row-container">
                 <div class="input-container">
-                    <input type="radio" name="sexo" id="hombre" value="Hombre">
-                    <label for="hombre">Hombre</label>
-                    <input type="radio" name="sexo" id="mujer" value="Mujer">
-                    <label for="mujer">Mujer</label>
-                    <input type="radio" name="sexo" id="otros" value="Otros">
-                    <label for="otros">Otros</label>
+                    <fieldset>
+                        <input type="radio" name="sexo" id="hombre" value="Hombre">
+                        <label for="hombre">Hombre</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="sexo" id="mujer" value="Mujer">
+                        <label for="mujer">Mujer</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="sexo" id="otros" value="Otros">
+                        <label for="otros">Otros</label>
+                    </fieldset>
                     <label id="lblsexo"></label>
                 </div>
                 <div class="input-container">
-                    <input type="checkbox" name="interes" id="deporte" value="Deporte">
-                    <label for="deporte">Deporte</label>
-                    <input type="checkbox" name="interes" id="musica" value="Musica">
-                    <label for="musica">Musica</label>
-                    <input type="checkbox" name="interes" id="juegos" value="Juegos">
-                    <label for="juegos">Juegos</label>
-                    <input type="checkbox" name="interes" id="tecnologia" value="Tecnologia">
-                    <label for="tecnologia">Tecnologia</label>
+                    <fieldset>
+                        <input type="checkbox" name="interes" id="deporte" value="Deporte">
+                        <label for="deporte">Deporte</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" name="interes" id="musica" value="Musica">
+                        <label for="musica">Musica</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" name="interes" id="juegos" value="Juegos">
+                        <label for="juegos">Juegos</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" name="interes" id="tecnologia" value="Tecnologia">
+                        <label for="tecnologia">Tecnologia</label>
+                    </fieldset>
                     <label id="lblinteres"></label>
                 </div>
             </div>
             <div class="row-container">
                 <div class="input-container">
                     <select id="pais" placeholder="Seleccionar...">
-                        <option>Seleccionar...</option>
-                        <option>Argentina</option>
-                        <option>Chile</option>
-                        <option>Brasil</option>
-                        <option>Uruguay</option>
+                        <option value="">Seleccionar...</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Uruguay">Uruguay</option>
                     </select>
                     <label id="lblpais" for="pais"></label>
                 </div>
             </div>
             <div class="row-container">
-                <div class="input-container">
+                <div class="input-container alone">
+                    <label for="comentarios">Comentarios (Opcional)</label>
                     <textarea id="comentarios"></textarea>
                 </div>
             </div>
@@ -96,7 +111,7 @@
         </form>
     </main>
     <footer>
-        <p>Arron Factories 2022. All rights reserved.</p>
+        <p>Arron Factories 2022. Rights reserved.</p>
     </footer>
 </body>
 </html>
