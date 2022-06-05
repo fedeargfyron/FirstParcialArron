@@ -1,6 +1,7 @@
 :root {
     --button-background: #0575E6;
     --input-background: #e4eff8;
+    --text-color: rgb(0,0,0);
     --error-background: #ffa69e;
     --error-label: #ffa69e;
     --radius-50: 50px;
@@ -8,7 +9,7 @@
 }
 
 ::placeholder {
-    color: black;
+    color: var(--text-color);
 }
 
 form{
@@ -25,19 +26,19 @@ option{
     font-family: var(--main-font);
     font-weight: bold;
     border-radius: var(--radius-50);
+    background-color: var(--input-background);
 }
 
 input[type=text]{
     border: unset;
-    background-color: var(--input-background);
-    color: black;
+    color: var(--text-color);
     padding: var(--padding-1);
     margin: .5rem .25rem;
 }
 
 button{
     background-color: var(--main-color);
-    color: black;
+    color: var(--text-color);
     border: unset;
     border-radius: var(--radius-50);
     padding: var(--padding-1) 2rem;
@@ -54,6 +55,7 @@ textarea{
     margin-top: 1rem;
     padding: .5rem;
     resize: none;
+    background-color: var(--input-background);
 }
 
 .row-container{
