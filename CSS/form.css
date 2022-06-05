@@ -58,6 +58,11 @@ textarea{
     background-color: var(--input-background);
 }
 
+label{
+    margin-left: 1rem;
+    color: var(--input-background);
+}
+
 .row-container{
     display: flex;
     flex-wrap: wrap;
@@ -70,19 +75,19 @@ textarea{
     flex-direction: column;
     text-align:start;
     padding: .25rem;
-    justify-content: center;
+    
 }
 
-.input-container label{
-    margin-left: 1rem;
+.input-container > label{
     color: var(--error-label);
     max-width: fit-content;
-    
+    display: none;
 }
 
 .input-container fieldset{
     padding: .25rem;
 }
+
 
 .alone{
     width: 100%;
@@ -94,7 +99,7 @@ textarea{
 }
 
 .visible{
-    display: block;
+    display: block !important;
 }
 
 .error{
