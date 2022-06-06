@@ -51,6 +51,8 @@ const validateAll = () => {
     let inputs = document.querySelectorAll("input[type=text]");
     inputs.forEach(x => validations(x));
 
+    let selectPais = document.getElementById("pais");
+    validations(selectPais);
     validations({ id: "sexo"});
     validations({ id: "intereses"});
 }
@@ -61,7 +63,10 @@ const submit = (e) => {
     if(document.getElementsByClassName("error").length > 0){
         return alert("Error en al menos 1 campo");
     }
-    e.submit();
+
+    //Agregar modal
+
+    document.getElementById('subscribe-form').submit();
 }
 
 window.onload = () => {
@@ -75,4 +80,7 @@ window.onload = () => {
 
     let checkboxInputs = document.getElementsByName("intereses");
     checkboxInputs.forEach(x => x.addEventListener("click", removeLabelOptions));
+
+    let select = document.getElementById("pais");
+    select.addEventListener("focus", removeLabel);
 }
