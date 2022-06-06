@@ -32,6 +32,11 @@ const removeLabel = (e) => {
     label.classList.remove("visible");
 }
 
+const removeLabelOptions = (e) => {
+    let label = document.getElementById(`lbl${e.target.name}`);
+    label.classList.remove("visible");
+}
+
 const validations = (e) => {
     let alertValue = fieldsValidations[e.id](e.value);
     if(alertValue) 
@@ -65,5 +70,9 @@ window.onload = () => {
     inputs.forEach(x => x.addEventListener("blur", validationsListener));
     inputs.forEach(x => x.addEventListener("focus", removeLabel));
 
-    
+    let radioInputs = document.getElementsByName("sexo");
+    radioInputs.forEach(x => x.addEventListener("click", removeLabelOptions));
+
+    let checkboxInputs = document.getElementsByName("intereses");
+    checkboxInputs.forEach(x => x.addEventListener("click", removeLabelOptions));
 }
