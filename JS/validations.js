@@ -7,23 +7,25 @@ const validateEmail = (value) => {
 
 const validateEdad = (value) => {
     if(isNaN(value) || 1 > value || value > 99){
-        return "Número de al menos 7 dígitos, no aceptar espacios, guiones ni paréntesis.";
+        return "Debe ser un número mayor a 0 y menor a 100";
     }
 }
 
-const validateSexo = (value) => !value && "Debe seleccionar un sexo valido."
+const validateMultipleOptions = (name) => {
+
+    let inputs = Array.from(document.getElementsByName(name));
+    
+    if(!inputs.some(x => x.checked)){
+        return `Debe tener al menos un casillero de ${name} seleccionado.`;
+    }
+}
 
 const validatePais = (value) => !value && "Debe seleccionar un pais valido."
-
-const validateIntereses = (values) => {
-
-}
 
 export { 
     validateNameLength,
     validateEmail,
     validateEdad,
-    validateSexo,
-    validatePais,
-    validateIntereses
+    validateMultipleOptions,
+    validatePais
 }

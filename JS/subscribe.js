@@ -2,33 +2,26 @@ import {
     validateNameLength,
     validateEmail,
     validateEdad,
-    validateSexo,
     validatePais,
-    validateIntereses
+    validateMultipleOptions
 } from './validations.js';
 
 const fieldsValidations = {
     "name": (value) => validateNameLength(value),
     "apellido": (value) => validateNameLength(value),
     "email": (value) => validateEmail(value),
-    "sexo": (value) => validateSexo(value),
     "edad": (value) => validateEdad(value),
     "pais": (value) => validatePais(value),
-    "intereses": (values) => validateIntereses(values)
+    "sexo": () => validateMultipleOptions("sexo"),
+    "intereses": () => validateMultipleOptions("intereses")
 }
 
-const validations = (e) => {
-    let alertValue = fieldsValidations[e.id](e.value);
-    if(alertValue){
-        let label = document.getElementById(`lbl${e.id}`);
-        label.innerHTML = alertValue;
-        label.classList.add("visible");
+const createLabel = (e, message) => {
+    let label = document.getElementById(`lbl${e.id}`);
+    label.innerHTML = message;
+    label.classList.add("visible");
+    if(e.classList)
         e.classList.add("error");
-    }
-}
-
-const validationsListener = (e) => {
-    validations(e.target);
 }
 
 const removeLabel = (e) => {
@@ -39,9 +32,22 @@ const removeLabel = (e) => {
     label.classList.remove("visible");
 }
 
+const validations = (e) => {
+    let alertValue = fieldsValidations[e.id](e.value);
+    if(alertValue) 
+        createLabel(e, alertValue);
+}
+
+const validationsListener = (e) => {
+    validations(e.target);
+}
+
 const validateAll = () => {
     let inputs = document.querySelectorAll("input[type=text]");
     inputs.forEach(x => validations(x));
+
+    validations({ id: "sexo"});
+    validations({ id: "intereses"});
 }
 
 const submit = (e) => {
@@ -54,8 +60,10 @@ const submit = (e) => {
 }
 
 window.onload = () => {
-    document.getElementById("submitBtn").addEventListener("click", submit)
+    document.getElementById("submitBtn").addEventListener("click", submit);
     let inputs = document.querySelectorAll("input[type=text]");
-    inputs.forEach(x => x.addEventListener("blur", validationsListener))
-    inputs.forEach(x => x.addEventListener("focus", removeLabel))
+    inputs.forEach(x => x.addEventListener("blur", validationsListener));
+    inputs.forEach(x => x.addEventListener("focus", removeLabel));
+
+    
 }

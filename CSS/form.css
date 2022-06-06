@@ -95,6 +95,7 @@ label{
 }
 
 .alone > label{
+    display: block;
     margin: 0;
 }
 
