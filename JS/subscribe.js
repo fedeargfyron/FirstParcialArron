@@ -84,7 +84,6 @@ window.onload = () => {
     select.addEventListener("focus", removeLabel);
 
     document.getElementById("close").addEventListener("click", () => {
-        console.log("hola");
         document.getElementById("modal").style.display = "none";
     })
 }

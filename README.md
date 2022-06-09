@@ -1,1 +1,1 @@
-Se inicializa Repositorio
+Este repositorio está orientado en un formulario de suscripción

@@ -61,7 +61,7 @@
     cursor: pointer;
     transition: var(--hover-transition);
 }
-  
+
 @keyframes animatetop{
     from {top: -100px; opacity: 0}
     to {top: 50%; opacity: 1}
