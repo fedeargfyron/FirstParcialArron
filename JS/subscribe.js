@@ -64,9 +64,8 @@ const submit = (e) => {
         return alert("Error en al menos 1 campo");
     }
 
-    //Agregar modal
-
-    document.getElementById('subscribe-form').submit();
+    let modal = document.getElementById("modal");
+    modal.style.display = "flex";
 }
 
 window.onload = () => {
@@ -83,4 +82,9 @@ window.onload = () => {
 
     let select = document.getElementById("pais");
     select.addEventListener("focus", removeLabel);
+
+    document.getElementById("close").addEventListener("click", () => {
+        console.log("hola");
+        document.getElementById("modal").style.display = "none";
+    })
 }

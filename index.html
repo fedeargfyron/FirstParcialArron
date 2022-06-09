@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./CSS/layout.css">
     <link rel="stylesheet" href="./CSS/subscribe.css">
     <link rel="stylesheet" href="./CSS/form.css">
+    <link rel="stylesheet" href="./CSS/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
@@ -33,6 +34,17 @@
         </nav>
     </header>
     <main class="subscribe-main">
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="close" class="close">&times;</span>
+                    <h2>Muchas gracias por suscribirte!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>En breve te llegará al email información asociada a la compañia y distintas promociones.</p>
+                </div>
+            </div>
+        </div>
         <form id="subscribe-form">
             <h1>Subscribe for free!</h1>
             <div class="row-container">
@@ -109,7 +121,7 @@
                     <textarea id="comentarios"></textarea>
                 </div>
             </div>
-            <button id="submitBtn" type="submit">Let's go</button>
+            <button id="submitBtn" type="submit">Vamos!</button>
         </form>
     </main>
     <footer>
