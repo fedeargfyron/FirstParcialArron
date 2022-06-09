@@ -64,8 +64,7 @@ const submit = (e) => {
         return alert("Error en al menos 1 campo");
     }
 
-    let modal = document.getElementById("modal");
-    modal.style.display = "flex";
+    document.getElementById("modal").style.display = "flex";
 }
 
 window.onload = () => {
@@ -80,8 +79,7 @@ window.onload = () => {
     let checkboxInputs = document.getElementsByName("intereses");
     checkboxInputs.forEach(x => x.addEventListener("click", removeLabelOptions));
 
-    let select = document.getElementById("pais");
-    select.addEventListener("focus", removeLabel);
+    document.getElementById("pais").addEventListener("focus", removeLabel);
 
     document.getElementById("close").addEventListener("click", () => {
         document.getElementById("modal").style.display = "none";
