@@ -4,10 +4,12 @@
     z-index: 1;
     top: 50%;
     left: 50%;
+    height: 100%;
+    width: 100%;
     transform: translate(-50%, -50%);
     overflow: auto;
     min-width: 40%;
-    height: 50%;
+    
     background-color: rgb(0,0,0, 0.9);
     border-radius: 10px;
     justify-content: center;
@@ -82,4 +84,11 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--main-color-hover);
+}
+
+@media only screen and (min-width: 768px){
+    .modal{
+        height: 50%;
+        width: auto;
+    }
 }
